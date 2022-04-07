@@ -42,7 +42,7 @@ $env:HTTP_PROXY="http://user:password@proxy.domain:8080"
 $env:HTTPS_PROXY="http://user:password@proxy.domain:8080"
 ```
 
-Define **Vault** variables as env variables (yes, you need Hasicorp Vault!):
+Define **Vault** variables as env variables (yes, you need Hashicorp Vault!):
 
 ```powershell
 $url='https://vault.domain/v1/auth/approle/login'
