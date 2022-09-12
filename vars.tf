@@ -23,14 +23,19 @@ variable "vsphere_pool" {
 	default= ""
 }
 
-variable "vsphere_network" {
+variable "vsphere_network_front" {
 	description = "Enter here the network attached to the VM interface"
 	default= "VLAN10"
 }
 
-variable "vsphere_template" {
+variable "vsphere_template_linux" {
 	description = "Enter here the template to build the VM with"
 	default= "rhel8.4"
+}
+
+variable "vsphere_template_windows" {
+	description = "Enter here the template to build the VM with"
+	default= "win2019"
 }
 
 variable "vsphere_server" {
@@ -42,3 +47,13 @@ variable "vault_addr" {
 	description = "Address of the Vault server"
 	default = "https://vault.domain"
 }
+
+variable "role_id" {
+	description = "Role ID to access vault"
+    default = "xxxx-xxxx-xxxx-xxx"
+}
+
+variable "secret_id" {
+	description = "Secret ID to access vault"
+    default = "xxxx-xxxx-xxxx-xxx"
+} 
