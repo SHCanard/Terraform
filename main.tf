@@ -20,7 +20,7 @@ data "vault_generic_secret" "domain_admin" {
   path = "secret/config/technical_domain_admin"
 }
 
-# Set terraform backend on etcdv3
+# Set terraform backend on etcdv3 - /!\ etcd is DEPRECATED and will be removed in a future release of Terraform
 terraform {
   backend "etcdv3" {
     endpoints = ["https://terraform01:2379", "https://terraform02:2379", "https://terraform03:2379"]
