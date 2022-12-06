@@ -86,3 +86,15 @@ It will take some time, but you will find a new VM "terraform-test" in the vcent
 
 ## Play around!
 Try to change some parameters (num_cpus,...) and see how terraform react when you replay Plan and Apply.
+
+**Terraform tips & tricks**
+
+## List ressources:
+```terraform
+terraform state list
+```
+
+Taint a ressource to force delete/create:
+```terraform
+terraform taint vsphere_virtual_machine.terraform-test
+```
